@@ -1,0 +1,35 @@
+#include <iostream>
+#include <vector>
+using namespace std;
+
+int main() {
+   vector<int> numbers;
+   vector<int> out;
+   int outlength;
+   int length;
+   cin >> length;
+   int input;
+   for(int i = 1; i< length; i++){
+      cin >> input;
+      numbers.push_back(input);
+   }
+   int lower;
+   cin >> lower;
+   int upper;
+   cin >> upper;
+   for(int i = 0; i<length-1; i++){
+      if(numbers.at(i) <= upper){
+         if(numbers.at(i) >= lower){
+            out.push_back(numbers.at(i));
+            outlength += 1;
+         }
+      }
+   }
+   for(int i = 0; i<outlength; i++){
+      cout << numbers.at(i) << ' ';
+   }
+   cout << endl;
+   /* Type your code here. */
+
+   return 0;
+}
